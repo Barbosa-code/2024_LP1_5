@@ -6,122 +6,105 @@
 }
 
 body {
-    font-family: 'Arial', sans-serif;
-    color: #fff;
-    background-color: #000;
-    overflow-x: hidden;
-}
-
-/* Cabeçalho */
-.header {
+    font-family: "Kanit", sans-serif;
+    background: linear-gradient(135deg, rgba(0, 0, 0, 1) 0%, rgba(30, 30, 112, 1) 55%);
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    padding: 20px 50px;
-    background: rgba(0, 0, 0, 0.8);
-    position: fixed;
-    top: 0;
+    height: 100vh;
+    width: 100vw;
+}
+
+/* Layout principal */
+.custom-layout {
+    width: 1200px;
+    height: 800px;
+    background-color: #101010;
+    border-radius: 20px;
+    position: relative;
+}
+
+/* Seção principal */
+.main-rectangle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    position: relative;
+}
+
+/* Texto central explicativo */
+.center-text h1 {
+    font-size: 48px;
+    color: white;
+    text-align: center;
+    margin-bottom: 20px; /* Espaço entre o título e o botão */
+}
+
+/* Botão central */
+.small-rectangle {
+    text-align: center;
+    width: 150px;
+    height: 50px;
+    background-color: rgba(30, 30, 112, 1);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px; /* Espaço entre o botão e outras seções, se necessário */
+}
+
+.small-rectangle a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    display: block;
     width: 100%;
-    z-index: 10;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    transition: background-color 0.3s;
 }
 
-.header .logo h1 {
-    font-size: 1.5em;
-    color: #fff;
+.small-rectangle a:hover {
+    background-color: rgba(40, 40, 140, 1);
 }
 
-.nav-links {
+/* Barra de navegação */
+.navbar {
+    width: 300px;
+    height: 35px;
+    background-color: rgba(30, 30, 112, 1);
+    border-radius: 25px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.navbar ul {
     list-style: none;
     display: flex;
-    gap: 20px;
-    font-size: large;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 0;
 }
 
-.nav-links li a {
+.navbar li {
+    margin: 0 15px;
+}
+
+.navbar a {
+    color: white;
     text-decoration: none;
-    color: #fff;
-    font-weight: bold;
-    transition: color 0.3s;
+    font-size: 16px;
+    text-transform: uppercase;
 }
 
-.nav-links li a:hover {
-    color: #00bcd4;
-}
-
-/* Hero Section */
-/* Estilização para a seção hero */
-.hero {
-    display: flex;
-    flex-direction: row; /* Alinha os itens em linha (horizontalmente) */
-    align-items: center; /* Centraliza verticalmente */
-    justify-content: space-between; /* Espaço entre título/texto e o botão */
-    padding: 20px;
-    background-color: #000; /* Fundo preto */
-    color: #fff;
-    height: 100vh; /* Ocupa a altura total da tela */
-}
-
-.hero-header {
-    flex: 1; /* Ocupará espaço proporcional */
-    text-align: left;
-}
-
-.hero-title {
-    font-size: 2.5rem;
-    color: #00c0ff; /* Azul brilhante */
-    margin: 0 0 10px;
-}
-
-.hero-subtitle {
-    font-size: 1.2rem;
-    color: #aaa; /* Cinza claro */
-    margin-bottom: 20px;
-}
-
-.hero-content {
-    flex: 2; /* Ocupará mais espaço do que o título */
-    padding-left: 20px;
-}
-
-.hero-description {
-    font-size: 1rem;
-    margin-bottom: 20px;
-    line-height: 1.6;
-}
-
-.button {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #00c0ff; /* Azul brilhante */
-    color: #fff;
-    text-decoration: none;
-    border-radius: 5px;
-    font-size: 1rem;
-    font-weight: bold;
-    text-align: center;
-}
-
-.button:hover {
-    background-color: #008fbf; /* Azul escuro ao passar o mouse */
-}
-
-/* Resolução para telas menores */
-@media (max-width: 768px) {
-    .hero {
-        flex-direction: column; /* Alinha os itens em coluna */
-        text-align: center;
-    }
-
-    .hero-content {
-        padding-left: 0;
-    }
-}
-
-/* Footer */
-.footer {
-    text-align: center;
-    background: rgba(0, 0, 0, 0.8);
-    padding: 10px 20px;
-    font-size: 0.9em;
-    color: #bbb;
+.navbar a:hover {
+    text-decoration: underline;
 }
