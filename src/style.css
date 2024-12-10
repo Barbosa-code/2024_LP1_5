@@ -6,96 +6,105 @@
 }
 
 body {
-    
-    font-family: Arial, sans-serif;
-    background: linear-gradient(135deg, rgba(0, 0, 0, 1) 0%, rgba(30, 30, 112, 1) 55%); /* Fundo com gradiente */
+    font-family: "Kanit", sans-serif;
+    background: linear-gradient(135deg, rgba(0, 0, 0, 1) 0%, rgba(30, 30, 112, 1) 55%);
     display: flex;
-    justify-content: center; /* Alinha no centro horizontal */
-    align-items: center; /* Alinha no centro vertical */
-    height: 100vh; /* Altura total da tela */
-    width: 100vw; /* Largura total da tela */
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
 }
 
-/* Estilo do artigo principal */
+/* Layout principal */
 .custom-layout {
-    width: 1200px; /* Largura do retângulo maior */
-    height: 800px; /* Altura do retângulo maior */
-    background-color: #101010 ; /* Cor do retângulo maior */
-    border-radius: 20px; /* Bordas arredondadas */
-    position: relative; /* Para posicionamento absoluto interno */
-}
-
-/* Quadrado à esquerda */
-.left-square {
-    
-    width: 450px; /* Largura do quadrado */
-    height: 250px; /* Altura do quadrado */
-    background-color: rgba(30, 30, 112, 1); /* Cor clara */
-    border-radius: 10px; /* Bordas arredondadas */
+    width: 1200px;
+    height: 800px;
+    background-color: #101010;
+    border-radius: 20px;
     position: relative;
-    top: 200px; /* Distância do topo */
-    left: 50px; /* Distância da esquerda */
-}
-.left-square img {
-    top: 250px; /* Distância do topo */
-    left: 100px;
-    width: 450px; /* Largura do quadrado */
-    height: 350px; 
-    border-radius: 10px;
-    position: center;
 }
 
-/* Texto central */
-.center-text {
-   
+/* Seção principal */
+.main-rectangle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
     position: relative;
-    top: 50%; /* Centraliza verticalmente */
-    left: 50%; /* Centraliza horizontalmente */
-    transform: translate(-50%, -50%); /* Ajuste fino para centralizar */
-    text-align: center;
 }
 
-.center-text p {
-    
-    padding-left: 510px;
-    padding-right: 20px;
-    padding-top: 100px;
-    text-align: left;
-    margin-bottom: 10px;
-    line-height: 1.6;
-    left: 200%;
-    font-size: 18px; /* Tamanho do texto */
-    color: white; /* Texto preto */
-}
-
-/* Retângulo pequeno central */
-.small-rectangle {
-    
-    text-align: center;
-    
+/* Texto central explicativo */
+.center-text h1 {
+    font-size: 48px;
     color: white;
-    width: 120px; /* Largura do retângulo pequeno */
-    height: 40px; /* Altura do retângulo pequeno */
-    background-color: rgba(30, 30, 112, 1); /* Cor clara */
-    border-radius: 10px; /* Bordas arredondadas */
-    position: absolute;
-    bottom: 280px; /* Distância do fundo */
-    left: 570px; /* Centraliza horizontalmente */
-    transform: translateX(-50%);
-}
-.small-rectangle p {
-    padding-top: 10px;
-    position: relatiuve;
+    text-align: center;
+    margin-bottom: 20px; /* Espaço entre o título e o botão */
 }
 
-/* Retângulo superior direito */
-.navbar{
-   
-    width: 400px; /* Largura do retângulo superior direito */
-    height: 35px; /* Altura do retângulo superior direito */
-    background-color: rgba(30, 30, 112, 1); /* Cor clara */
-    border-radius: 10px; /* Bordas arredondadas */
+/* Botão central */
+.small-rectangle {
+    text-align: center;
+    width: 150px;
+    height: 50px;
+    background-color: rgba(30, 30, 112, 1);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px; /* Espaço entre o botão e outras seções, se necessário */
+}
+
+.small-rectangle a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    display: block;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    transition: background-color 0.3s;
+}
+
+.small-rectangle a:hover {
+    background-color: rgba(40, 40, 140, 1);
+}
+
+/* Barra de navegação */
+.navbar {
+    width: 300px;
+    height: 35px;
+    background-color: rgba(30, 30, 112, 1);
+    border-radius: 25px;
     position: absolute;
-    top: 20px; /* Distância do topo */
-    right: 20px; /* Distância da direita */
+    top: 20px;
+    right: 20px;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 0;
+}
+
+.navbar li {
+    margin: 0 15px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+.navbar a:hover {
+    text-decoration: underline;
 }
