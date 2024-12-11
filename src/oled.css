@@ -125,40 +125,80 @@ footer {
   
   /* Animação do carrossel */
   @keyframes slide {
-    0%, 9% {
+    0%, 6% {
       transform: translateX(0);
     }
-    10%, 19% {
+    7%, 13% {
       transform: translateX(-100%);
     }
-    20%, 29% {
+    14%, 20% {
       transform: translateX(-200%);
     }
-    30%, 39% {
+    21%, 27% {
       transform: translateX(-300%);
     }
-    40%, 49% {
+    28%, 34% {
         transform: translateX(-400%);
       }
-      50%, 59% {
+      35%, 41% {
         transform: translateX(-500%);
       }
-    60%, 69% {
+      42%, 48% {
+        transform: translateX(-600%);
+      }
+    49%, 55% {
+      transform: translateX(-500%);
+    }
+    56%, 62% {
       transform: translateX(-400%);
     }
-    70%, 79% {
-      transform: translateX(-300%);
-    }
-    80%, 89% {
+    63%, 69% {
+        transform: translateX(-300%);
+      }
+      70%, 76% {
         transform: translateX(-200%);
       }
-      90%, 95% {
+      77%, 83% {
         transform: translateX(-100%);
       }
-    96%, 100% {
+    84%, 100% {
       transform: translateX(0);
     }
     
   }
+  /* Barra de navegação */
+.navbar {
+  width: 300px;
+  height: 35px;
+  background-color: rgba(30, 30, 112, 1);
+  border-radius: 25px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding: 0;
+}
+
+.navbar li {
+  margin: 0 15px;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+.navbar a:hover {
+  text-decoration: underline;
+}
 
 

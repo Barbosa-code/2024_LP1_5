@@ -15,96 +15,44 @@ body {
     width: 100vw;
 }
 
-/* Layout principal */
-.custom-layout {
-    width: 1200px;
-    height: 800px;
-    background-color: #101010;
-    border-radius: 20px;
-    position: relative;
-}
-
-/* Seção principal */
-.main-rectangle {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    position: relative;
-}
-
-/* Texto central explicativo */
-.center-text h1 {
-    font-size: 48px;
-    color: white;
+.table-container {
+    margin: 20px auto;
+    max-width: 800px;
     text-align: center;
-    margin-bottom: 20px; /* Espaço entre o título e o botão */
 }
 
-/* Botão central */
-.small-rectangle {
+h1 {
     text-align: center;
-    width: 150px;
-    height: 50px;
-    background-color: rgba(30, 30, 112, 1);
-    border-radius: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 20px; /* Espaço entre o botão e outras seções, se necessário */
+    color: #fff;
+    margin-bottom: 20px;
 }
 
-.small-rectangle a {
-    text-decoration: none;
-    color: white;
-    font-size: 18px;
-    font-weight: bold;
-    display: block;
+table {
     width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 10px;
-    transition: background-color 0.3s;
+    border-collapse: separate;
+    border-spacing: 12px; /* Espaçamento entre as células */
+    background-color: black; /* Fundo preto entre células */
 }
 
-.small-rectangle a:hover {
-    background-color: rgba(40, 40, 140, 1);
-}
-
-/* Barra de navegação */
-.navbar {
-    width: 300px;
-    height: 35px;
-    background-color: rgba(30, 30, 112, 1);
-    border-radius: 25px;
-    position: absolute;
-    top: 20px;
-    right: 20px;
-}
-
-.navbar ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    padding: 0;
-}
-
-.navbar li {
-    margin: 0 15px;
-}
-
-.navbar a {
+th, td {
+    padding: 10px;
+    text-align: left;
+    background-color: #1E1E70; /* Cor padrão das células */
     color: white;
-    text-decoration: none;
-    font-size: 16px;
-    text-transform: uppercase;
 }
 
-.navbar a:hover {
-    text-decoration: underline;
+th { 
+    padding: 16px;
+    text-align: center;   
+    background-color: #222; /* Cor da primeira linha */
+    color: white;
 }
+
+tr td:first-child {
+    padding: 16px;
+    text-align: center; 
+    background-color: #222; /* Cor da primeira coluna */
+    color: white;
+}
+
+
