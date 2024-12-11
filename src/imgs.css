@@ -1,0 +1,111 @@
+
+        /* Reset básico */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Corpo da página */
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, rgba(0,0,0,1)0%, rgba(30,30,112,1)55%);
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        /* Container principal */
+        .container {
+            width: 90%;
+            max-width: 1200px;
+        }
+
+        /* Estilo de seção */
+        .section {
+            margin-bottom: 40px;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.7);
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+            display: flex;
+            align-items: center;
+        }
+
+            /* Alternância da posição das imagens e do texto */
+            .section:nth-child(odd) .content {
+                
+                margin-left: 20px;
+            }
+
+            .section:nth-child(even) .content {
+             
+                margin-right: 20px;
+            }
+
+        .section img {
+            width: 45%; /* Reduz o tamanho das imagens */
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+            order: 1; /* Padrão: as imagens ficam à esquerda */
+        }
+
+        .section:nth-child(odd) img {
+            order: 0; /* Nas seções ímpares, a imagem fica à esquerda */
+        }
+
+        .section .content {
+            flex: 1;
+        }
+
+        .section h2 {
+            font-size: 1.8em;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .section p {
+            font-size: 1.2em;
+            line-height: 1.6;
+            text-align: justify;
+        }
+          /* Barra de navegação */
+.navbar {
+    width: 300px;
+    height: 35px;
+    background-color: rgba(30, 30, 112, 1);
+    border-radius: 25px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+  
+  .navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 0;
+  }
+  
+  .navbar li {
+    margin: 0 15px;
+  }
+  
+  .navbar a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    text-transform: uppercase;
+  }
+  
+  .navbar a:hover {
+    text-decoration: underline;
+  }
+  

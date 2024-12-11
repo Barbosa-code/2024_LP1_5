@@ -125,43 +125,37 @@ footer {
   
   /* Animação do carrossel */
   @keyframes slide {
-    0%, 6% {
+    0%, 7% {
       transform: translateX(0);
     }
-    7%, 13% {
+    8%, 15% {
       transform: translateX(-100%);
     }
-    14%, 20% {
+    16%, 23% {
       transform: translateX(-200%);
     }
-    21%, 27% {
+    24%, 31% {
       transform: translateX(-300%);
     }
-    28%, 34% {
+    32%, 38% {
         transform: translateX(-400%);
       }
-      35%, 41% {
+      39%, 46% {
         transform: translateX(-500%);
       }
-      42%, 48% {
-        transform: translateX(-600%);
-      }
-    49%, 55% {
-      transform: translateX(-500%);
-    }
-    56%, 62% {
+    47%, 54% {
       transform: translateX(-400%);
     }
-    63%, 69% {
+    55%, 62% {
         transform: translateX(-300%);
       }
-      70%, 76% {
+      63%, 70% {
         transform: translateX(-200%);
       }
-      77%, 83% {
+      71%, 78% {
         transform: translateX(-100%);
       }
-    84%, 100% {
+    79%, 100% {
       transform: translateX(0);
     }
     
