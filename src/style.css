@@ -257,6 +257,14 @@ body {
     width: 50px;
     height: 50px;
 }
+.titulo-arrow a img {
+    cursor: pointer; /* Exibe o ponteiro no hover */
+    transition: transform 0.2s ease; /* Animação suave */
+}
+
+.titulo-arrow a img:hover {
+    transform: scale(1.1); /* Aumenta levemente no hover */
+}
 
 
  
