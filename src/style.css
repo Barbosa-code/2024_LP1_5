@@ -19,6 +19,8 @@ body {
 
 /* Layout principal */
 .custom-layout {
+    display: flex;
+    flex-direction: column;
     width: 1200px;
     height: 800px;
     background-color: #101010;
@@ -40,10 +42,22 @@ body {
     display: flex;
     justify-content: center; /* Centraliza os itens horizontalmente */
     align-items: center; /* Centraliza os itens verticalmente */
-    height: 60%; /* Mantém a altura proporcional */
+    height: 40%; /* Mantém a altura proporcional */
     position: relative;
     width: 100%; /* Garante que o container ocupe toda a largura disponível */
     margin: 0 auto; /* Centraliza a seção horizontalmente */
+}
+.main-rectangle3 {
+    padding-top: 40px;
+    display: flex;
+    justify-content: center; /* Centraliza os itens horizontalmente */
+    align-items: center; /* Centraliza os itens verticalmente */
+    height: 40%; /* Mantém a altura proporcional */
+    position: relative;
+    width: 100%; /* Garante que o container ocupe toda a largura disponível */
+    margin: 0 auto; /* Centraliza a seção horizontalmente */
+    
+
 }
 
 
@@ -124,7 +138,7 @@ body {
 
 .zoom {
     border-radius: 15px;
-    background-color: green;
+    background-color: black;
     transition: transform .5s; /* Animation */
     width: 400px;
     height: 400px;
@@ -163,7 +177,7 @@ body {
 }
 .zoom1 {
     border-radius: 15px;
-    background-color: green;
+    background-color: black;
     transition: transform .5s; /* Animation */
     width: 400px;
     height: 400px;
@@ -204,6 +218,7 @@ body {
     color: white;
     font-family: "Kanit", sans-serif;
     padding-top: 25px;
+    font-size: 48px;
     text-align: center;
   }
   .botao{
@@ -236,35 +251,75 @@ body {
     display: flex;
     justify-content: center;
   }
-  .titulo-arrow {
+  .arrow {
     display: flex;
     justify-content: space-between; /* Espaço entre a imagem e o título */
     align-items: center; /* Centraliza verticalmente */
     
 }
 
-.titulo-arrow h1 {
-    flex-grow: 1; /* Permite que o título ocupe o espaço necessário */
-    text-align: center; /* Centraliza o texto */
-    color: white;
-    font-family: "Kanit", sans-serif;
-    margin: 0; /* Remove margens extras */
-    font-size: 32px;
-}
 
-.titulo-arrow img {
+
+.arrow img {
     margin: 20px; /* Adiciona espaçamento ao redor da imagem */
     width: 50px;
     height: 50px;
 }
-.titulo-arrow a img {
+.arrow a img {
     cursor: pointer; /* Exibe o ponteiro no hover */
-    transition: transform 0.2s ease; /* Animação suave */
+    transition: transform 0.5s ease; /* Animação suave */
 }
 
-.titulo-arrow a img:hover {
+.arrow a img:hover {
     transform: scale(1.1); /* Aumenta levemente no hover */
 }
 
+.image-text-container {
+    display: flex;
+    align-items: center;
+    margin: 25px;
+    gap: 20px;
+    background-color: rgba(30, 30, 112, 1);
+    padding: 20px;
+    border-radius: 10px;
+    
+    box-shadow: 0 4px 6px rgba(206, 182, 182, 0);
+    max-width: 800px;
+    width: 100%;
+}
+
+/* Imagem */
+.image-frame {
+    flex: 1;
+    margin-left: 30px;
+    max-width: 500px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.image-frame img {
+    width: 100%;
+    
+    height: auto;
+    display: flex;
+    border-radius: 10px;
+}
+
+/* Texto */
+.text-content {
+    flex: 2;
+}
+
+.text-content h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.text-content p {
+    font-size: 16px;
+    color: white;
+    line-height: 1.5;
+}
 
  
