@@ -26,6 +26,7 @@ body {
     background-color: #101010;
     border-radius: 20px;
     position: relative;
+    overflow: auto;
 }
 
 /* Seção principal */
@@ -48,17 +49,21 @@ body {
     margin: 0 auto; /* Centraliza a seção horizontalmente */
 }
 .main-rectangle3 {
+    padding: 20px;
     padding-top: 40px;
     display: flex;
-    justify-content: center; /* Centraliza os itens horizontalmente */
-    align-items: center; /* Centraliza os itens verticalmente */
-    height: 40%; /* Mantém a altura proporcional */
+    justify-content: center;
+    align-items: flex-start; /* Centraliza verticalmente */
+    flex-wrap: wrap; /* Permite que os itens quebrem para a próxima linha */
+    height: 100%; /* Define a altura com base no conteúdo */
+    max-height: 100%; /* Garante que não ultrapasse os limites */
     position: relative;
-    width: 100%; /* Garante que o container ocupe toda a largura disponível */
-    margin: 0 auto; /* Centraliza a seção horizontalmente */
-    
-
+    width: 100%;
+    margin: 0 auto;
+    overflow: auto; /* Adiciona rolagem se necessário */
+    box-sizing: border-box;
 }
+
 
 
 /* Texto central explicativo */
@@ -140,8 +145,8 @@ body {
     border-radius: 15px;
     background-color: black;
     transition: transform .5s; /* Animation */
-    width: 400px;
-    height: 400px;
+    width: 350px;
+    height: 350px;
     margin: 0 40px;
     align-items: center;
   }
@@ -153,8 +158,8 @@ body {
   .zoom img{
     border-radius: 15px;
     position: center;
-    width: 400px;
-    height: 400px;
+    width: 350px;
+    height: 350px;
     
   }
   .zoom::after {
@@ -179,8 +184,8 @@ body {
     border-radius: 15px;
     background-color: black;
     transition: transform .5s; /* Animation */
-    width: 400px;
-    height: 400px;
+    width: 350px;
+    height: 350px;
     margin: 0 40px;
     align-items: center;
   }
@@ -192,8 +197,8 @@ body {
   .zoom1 img{
     border-radius: 15px;
     position: center;
-    width: 400px;
-    height: 400px;
+    width: 350px;
+    height: 350px;
     
   }
   .zoom1::after {
@@ -218,6 +223,7 @@ body {
     color: white;
     font-family: "Kanit", sans-serif;
     padding-top: 25px;
+    margin-bottom: 20px;
     font-size: 48px;
     text-align: center;
   }
@@ -247,7 +253,7 @@ body {
     transition: background-color 0.3s;
   }
   .botaoComparar{
-    margin-top: 30px;
+    margin-top: 80px;
     display: flex;
     justify-content: center;
   }
@@ -279,10 +285,8 @@ body {
     align-items: center;
     margin: 25px;
     gap: 20px;
-    background-color: rgba(30, 30, 112, 1);
     padding: 20px;
     border-radius: 10px;
-    
     box-shadow: 0 4px 6px rgba(206, 182, 182, 0);
     max-width: 800px;
     width: 100%;
@@ -292,28 +296,31 @@ body {
 .image-frame {
     flex: 1;
     margin-left: 30px;
+   
     max-width: 500px;
     overflow: hidden;
     border-radius: 10px;
 }
 
 .image-frame img {
-    width: 100%;
-    
-    height: auto;
+    width: 400px;
+    height: 400px;
     display: flex;
     border-radius: 10px;
 }
 
+
 /* Texto */
 .text-content {
     flex: 2;
+    
 }
 
 .text-content h2 {
     font-size: 24px;
     margin-bottom: 10px;
     color: white;
+   
 }
 
 .text-content p {
@@ -321,5 +328,30 @@ body {
     color: white;
     line-height: 1.5;
 }
+.text-content li {
+    color: white;
+}
 
- 
+ /* Define a aparência do container da barra de rolagem */
+::-webkit-scrollbar {
+    width: 10px; /* Largura da barra vertical */
+    height: 10px; /* Altura da barra horizontal */
+  }
+  
+  /* Define a aparência do trilho da barra de rolagem */
+  ::-webkit-scrollbar-track {
+    background: #101010; /* Cor do fundo do trilho */
+    border-radius: 5px; /* Bordas arredondadas */
+  }
+  
+  /* Define a aparência do polegar da barra de rolagem */
+  ::-webkit-scrollbar-thumb {
+    background: #888; /* Cor do polegar */
+    border-radius: 5px; /* Bordas arredondadas */
+  }
+  
+  /* Cor do polegar ao passar o mouse */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+  
