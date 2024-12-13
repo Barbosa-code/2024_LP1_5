@@ -5,6 +5,8 @@
     box-sizing: border-box;
 }
 
+
+
 body {
     font-family: "Kanit", sans-serif;
     background: linear-gradient(135deg, rgba(0, 0, 0, 1) 0%, rgba(30, 30, 112, 1) 55%);
@@ -17,11 +19,14 @@ body {
 
 /* Layout principal */
 .custom-layout {
+    display: flex;
+    flex-direction: column;
     width: 1200px;
     height: 800px;
     background-color: #101010;
     border-radius: 20px;
     position: relative;
+    overflow: auto;
 }
 
 /* Seção principal */
@@ -33,6 +38,33 @@ body {
     height: 100%;
     position: relative;
 }
+.main-rectangle2 {
+    padding-top: 40px;
+    display: flex;
+    justify-content: center; /* Centraliza os itens horizontalmente */
+    align-items: center; /* Centraliza os itens verticalmente */
+    height: 40%; /* Mantém a altura proporcional */
+    position: relative;
+    width: 100%; /* Garante que o container ocupe toda a largura disponível */
+    margin: 0 auto; /* Centraliza a seção horizontalmente */
+}
+.main-rectangle3 {
+    padding: 20px;
+    padding-top: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Centraliza verticalmente */
+    flex-wrap: wrap; /* Permite que os itens quebrem para a próxima linha */
+    height: 100%; /* Define a altura com base no conteúdo */
+    max-height: 100%; /* Garante que não ultrapasse os limites */
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    overflow: auto; /* Adiciona rolagem se necessário */
+    box-sizing: border-box;
+}
+
+
 
 /* Texto central explicativo */
 .center-text h1 {
@@ -108,3 +140,263 @@ body {
 .navbar a:hover {
     text-decoration: underline;
 }
+
+.zoom {
+    border-radius: 15px;
+    background-color: black;
+    transition: transform .5s; /* Animation */
+    width: 350px;
+    height: 350px;
+    margin: 0 40px;
+    align-items: center;
+  }
+  
+.zoom:hover {
+    border-radius: 15px;
+    transform: scale(1.2); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+  }
+  .zoom img{
+    border-radius: 15px;
+    position: center;
+    width: 350px;
+    height: 350px;
+    
+  }
+  .zoom::after {
+    content: "IPS"; /* Texto exibido no hover */
+    position: absolute;
+    top: 50%; /* Centraliza verticalmente */
+    left: 50%; /* Centraliza horizontalmente */
+    transform: translate(-50%, -50%); /* Ajusta o posicionamento */
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px 20px;
+    opacity: 0; /* Inicialmente invisível */
+    transition: opacity 0.3s; /* Suave transição de visibilidade */
+}
+
+.zoom:hover::after {
+    opacity: 1; /* Torna o texto visível no hover */
+}
+.zoom1 {
+    border-radius: 15px;
+    background-color: black;
+    transition: transform .5s; /* Animation */
+    width: 350px;
+    height: 350px;
+    margin: 0 40px;
+    align-items: center;
+  }
+  
+.zoom1:hover {
+    border-radius: 15px;
+    transform: scale(1.2); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+  }
+  .zoom1 img{
+    border-radius: 15px;
+    position: center;
+    width: 350px;
+    height: 350px;
+    
+  }
+  .zoom1::after {
+    content: "OLED"; /* Texto exibido no hover */
+    position: absolute;
+    top: 50%; /* Centraliza verticalmente */
+    left: 50%; /* Centraliza horizontalmente */
+    transform: translate(-50%, -50%); /* Ajusta o posicionamento */
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px 20px;
+    opacity: 0; /* Inicialmente invisível */
+    transition: opacity 0.3s; /* Suave transição de visibilidade */
+}
+
+.zoom1:hover::after {
+    opacity: 1; /* Torna o texto visível no hover */
+}
+  .titulo {
+    color: white;
+    font-family: "Kanit", sans-serif;
+    padding-top: 25px;
+    margin-bottom: 20px;
+    font-size: 48px;
+    text-align: center;
+  }
+  .botao{
+    text-align: center;
+    width: 150px;
+    height: 50px;
+    background-color: rgba(30, 30, 112, 1);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px; /* Espaço entre o botão e outras seções, se necessário */
+  }
+  .botao a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    display: block;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    transition: background-color 0.3s;
+  }
+  .botaoComparar{
+    margin-top: 80px;
+    display: flex;
+    justify-content: center;
+  }
+  .arrow {
+    display: flex;
+    justify-content: space-between; /* Espaço entre a imagem e o título */
+    align-items: center; /* Centraliza verticalmente */
+    
+}
+
+
+
+.arrow img {
+    margin: 20px; /* Adiciona espaçamento ao redor da imagem */
+    width: 50px;
+    height: 50px;
+}
+.arrow a img {
+    cursor: pointer; /* Exibe o ponteiro no hover */
+    transition: transform 0.5s ease; /* Animação suave */
+}
+
+.arrow a img:hover {
+    transform: scale(1.1); /* Aumenta levemente no hover */
+}
+
+.image-text-container {
+    display: flex;
+    align-items: center;
+    margin: 25px;
+    gap: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(206, 182, 182, 0);
+    max-width: 800px;
+    width: 100%;
+}
+
+/* Imagem */
+.image-frame {
+    flex: 1;
+    margin-left: 30px;
+   
+    max-width: 800px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.image-frame img {
+    width: 600px;
+    height: 400px;
+    display: flex;
+    border-radius: 10px;
+}
+
+
+/* Texto */
+.text-content {
+    flex: 2;
+    
+}
+
+.text-content h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: white;
+   
+}
+
+.text-content p {
+    font-size: 22px;
+    color: white;
+    line-height: 1.5;
+}
+.text-content li {
+    color: white;
+}
+
+.text-content strong{
+    color:rgba(30, 30, 112, 1);
+}
+
+ /* Define a aparência do container da barra de rolagem */
+::-webkit-scrollbar {
+    width: 10px; /* Largura da barra vertical */
+    height: 10px; /* Altura da barra horizontal */
+  }
+  
+  /* Define a aparência do trilho da barra de rolagem */
+  ::-webkit-scrollbar-track {
+    background: #101010; /* Cor do fundo do trilho */
+    border-radius: 5px; /* Bordas arredondadas */
+  }
+  
+  /* Define a aparência do polegar da barra de rolagem */
+  ::-webkit-scrollbar-thumb {
+    background: #888; /* Cor do polegar */
+    border-radius: 5px; /* Bordas arredondadas */
+  }
+  
+  /* Cor do polegar ao passar o mouse */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+
+  /*Responsividade */
+
+  @media (max-width: 600px){
+    body{
+        font-size: 14px;
+        padding: 10px;
+    }
+    img{
+        width: auto;
+    }
+
+
+}
+
+
+  
+
+  @media (min-width: 601px) and (max-width: 1024px) {
+    body {
+        font-size: 16px;
+        padding: 20px;
+    }
+
+    
+    
+    img{
+        width: auto;
+    }
+  }
+
+  @media (min-width: 1025px) {
+    body{
+        font-size: 18px;
+        padding: 30px;
+    }
+
+    img{
+        width: auto;
+    }
+  }
+  
