@@ -11,27 +11,32 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    width: 100vw;
+    min-height: 100vh; /* Garante altura mínima da tela */
+    width: 100%;
+    overflow-y: auto; /* Habilita rolagem vertical caso necessário */
+    overflow-x: hidden; /* Evita rolagem horizontal */
 }
 
 .table-container {
-    margin: 20px auto;
-    max-width: 800px;
+    margin: 50px auto; /* Espaçamento maior no topo e embaixo */
+    max-width: 800px; /* Largura máxima da tabela */
     text-align: center;
+    padding: 20px; /* Espaço interno extra */
+    background-color: #100c24; /* Fundo preto para conter a tabela */
+    border-radius: 8px; /* Bordas arredondadas para visual moderno */
 }
 
 h1 {
     text-align: center;
     color: #fff;
-    margin-bottom: 20px;
+    margin-bottom: 20px; /* Espaço abaixo do título */
 }
 
 table {
     width: 100%;
-    border-collapse: separate;
-    border-spacing: 12px; /* Espaçamento entre as células */
-    background-color: black; /* Fundo preto entre células */
+    border-collapse: separate; /* Permite espaçamento entre células */
+    border-spacing: 12px; /* Espaçamento preto entre células */
+    background-color: #100c24; /* Fundo preto entre células */
 }
 
 th, td {
@@ -39,6 +44,7 @@ th, td {
     text-align: left;
     background-color: #1E1E70; /* Cor padrão das células */
     color: white;
+    border-radius: 4px; /* Bordas arredondadas para as células */
 }
 
 th { 
@@ -55,4 +61,23 @@ tr td:first-child {
     color: white;
 }
 
+.arrow {
+    display: flex;
+    justify-content: space-between; /* Espaço entre a imagem e o título */
+    align-items: center; /* Centraliza verticalmente */
+}
 
+.arrow img {
+    margin: 20px; /* Adiciona espaçamento ao redor da imagem */
+    width: 50px;
+    height: 50px;
+}
+
+.arrow a img {
+    cursor: pointer; /* Exibe o ponteiro no hover */
+    transition: transform 0.5s ease; /* Animação suave */
+}
+
+.arrow a img:hover {
+    transform: scale(1.1); /* Aumenta levemente no hover */
+}
