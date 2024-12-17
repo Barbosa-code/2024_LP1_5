@@ -8,7 +8,6 @@
 
 
 body {
-    
     font-family: "Kanit", sans-serif;
     background: linear-gradient(135deg, rgba(0, 0, 0, 1) 0%, rgba(30, 30, 112, 1) 55%);
     display: flex;
@@ -30,9 +29,19 @@ body {
     overflow-y: auto; /* Ativa rolagem apenas vertical */
     overflow-x: hidden; /* Remove rolagem horizontal */
 }
+.custom-layout1 {
+    display: flex;
+    flex-direction: column;
+    width: 1000px;
+    height: 600px;
+    background-color: #101010; /* Retângulo preto */
+    border-radius: 20px;
+    position: relative;
+    
+}
 @media screen and (max-width: 1024px) {
     .custom-layout {
-        width: 55%;
+        width: 85%;
         margin: 10px auto;
         border-radius: 15px;
     }
@@ -43,8 +52,8 @@ body {
     }
 
     .zoom, .zoom1 {
-        width: 300px;
-        height: 300px;
+        width: 250px;
+        height: 250px;
     }
 }
 
@@ -69,19 +78,20 @@ body {
 }
 .main-rectangle3 {
     padding: 20px;
-    padding-top: 40px;
+    
     display: flex;
     justify-content: center;
     align-items: flex-start; /* Centraliza verticalmente */
     flex-wrap: wrap; /* Permite que os itens quebrem para a próxima linha */
-    height: 100%; /* Define a altura com base no conteúdo */
+    height: 60%; /* Define a altura com base no conteúdo */
     max-height: 100%; /* Garante que não ultrapasse os limites */
     position: relative;
     width: 100%;
     margin: 0 auto;
-    overflow: auto; /* Adiciona rolagem se necessário */
+    overflow-x: auto;
     box-sizing: border-box;
 }
+
 
 
 
@@ -125,47 +135,13 @@ body {
     background-color: rgba(40, 40, 140, 1);
 }
 
-/* Barra de navegação */
-.navbar {
-    width: 300px;
-    height: 35px;
-    background-color: rgba(30, 30, 112, 1);
-    border-radius: 25px;
-    position: absolute;
-    top: 20px;
-    right: 20px;
-}
-
-.navbar ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    padding: 0;
-}
-
-.navbar li {
-    margin: 0 15px;
-}
-
-.navbar a {
-    color: white;
-    text-decoration: none;
-    font-size: 16px;
-    text-transform: uppercase;
-}
-
-.navbar a:hover {
-    text-decoration: underline;
-}
 
 .zoom {
     border-radius: 15px;
-    background-color: black;
+    
     transition: transform .5s; /* Animation */
-    width: 350px;
-    height: 350px;
+    width: 250px;
+    height: 250px;
     margin: 0 40px;
     align-items: center;
   }
@@ -177,8 +153,8 @@ body {
   .zoom img{
     border-radius: 15px;
     position: center;
-    width: 350px;
-    height: 350px;
+    width: 250px;
+    height: 250px;
     
   }
   .zoom::after {
@@ -201,10 +177,10 @@ body {
 }
 .zoom1 {
     border-radius: 15px;
-    background-color: black;
+    
     transition: transform .5s; /* Animation */
-    width: 350px;
-    height: 350px;
+    width: 250px;
+    height: 250px;
     margin: 0 40px;
     align-items: center;
   }
@@ -216,8 +192,8 @@ body {
   .zoom1 img{
     border-radius: 15px;
     position: center;
-    width: 350px;
-    height: 350px;
+    width: 250px;
+    height: 250px;
     
   }
   .zoom1::after {
@@ -242,7 +218,7 @@ body {
     color: white;
     font-family: "Kanit", sans-serif;
     padding-top: 25px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     font-size: 48px;
     text-align: center;
   }
@@ -272,7 +248,7 @@ body {
     transition: background-color 0.3s;
   }
   .botaoComparar{
-    margin-top: 120px;
+    margin-top: 60px;
     display: flex;
     justify-content: center;
   }
